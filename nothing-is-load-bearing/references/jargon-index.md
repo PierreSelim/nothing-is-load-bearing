@@ -87,7 +87,7 @@ dependency edges, not through space, and systems do not have fronts.
 | blast radius | a bomb's damage circle | which services stop working, and which keep working |
 | limit the blast radius | containing an explosion | the failure stops at the queue; consumers keep serving stale data |
 | nuke it / nuke the table | a nuclear weapon | drop and recreate the table |
-| shoot yourself in the foot | self-inflicted gunshot | the API lets a caller pass a landing time before its takeoff |
+| shoot yourself in the foot | self-inflicted gunshot | the API lets a caller book a check-out date before the check-in |
 | footgun | a gun aimed at your foot | the parameter is easy to pass in the wrong order; both are strings |
 | battle-tested | survived combat | has run in production for two years under 5k messages/s |
 | war room | military command post | a scheduled call during the migration |
@@ -144,7 +144,8 @@ These usually hide the actual condition being checked.
 | Phrase | The picture | Write instead |
 |---|---|---|
 | gate (verb) | a gate in a fence | do not deploy until the integration suite passes |
-| gate (noun) / quality gate | a checkpoint | the check that must pass, and what it checks |
+| gate (noun) / quality gate / eligibility gate | an electronic logic gate, or a checkpoint barrier | the conditions checked, named: "borrowing conditions: no overdue book, fewer than five loans" |
+| guard (noun) | a sentry | **(term of art in code: guard clause)** — keep inside code; in prose, the condition and what it rejects |
 | gating factor | the thing holding the gate shut | the condition that is not yet met |
 | ungate / open the gate | removing the barrier | enable the feature for all accounts |
 | lever | a mechanical lever | the one setting that changes the outcome — name it and its range |
@@ -320,7 +321,7 @@ The picture is a kitchen. Rarely says anything; almost always deletable.
 | soup to nuts | a full dinner | from receipt of the event to the stored delay |
 | cherry-pick | selecting fruit | **(term of art in git)** — keep; otherwise, say which items and why |
 | dogfooding | eating one's own dog food | the team uses it for its own work |
-| a slice of | portioning | a subset: the 200 flights in one region |
+| a slice of | portioning | a subset: the 200 orders shipped to one region |
 | spoon-feed | feeding a child | the API requires the caller to pass each field separately |
 | sandwich | layered food | between X and Y |
 | alphabet soup | a jumble of letters | the four acronyms, expanded |
