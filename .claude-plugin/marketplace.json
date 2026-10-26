@@ -1,0 +1,12 @@
+{
+  "name": "nothing-is-load-bearing",
+  "owner": { "name": "PierreSelim" },
+  "metadata": { "description": "Removes AI-generated jargon from technical documents." },
+  "plugins": [
+    {
+      "name": "nothing-is-load-bearing",
+      "source": "./",
+      "description": "Removes AI-generated jargon from technical documents."
+    }
+  ]
+}

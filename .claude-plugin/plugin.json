@@ -1,0 +1,9 @@
+{
+  "name": "nothing-is-load-bearing",
+  "displayName": "Nothing Is Load Bearing",
+  "description": "Removes AI-generated jargon from technical documents, replacing vague metaphors and filler with concrete, verifiable statements.",
+  "version": "1.0.0",
+  "author": { "name": "PierreSelim" },
+  "repository": "https://github.com/PierreSelim/nothing-is-load-bearing",
+  "license": "MIT"
+}

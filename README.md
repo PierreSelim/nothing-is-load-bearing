@@ -43,16 +43,28 @@ It works both on new drafts and on documents assembled from existing documentati
 
 ## Installation
 
-Copy the `nothing-is-load-bearing/` skill directory into your Claude Code skills directory:
+This repository is a Claude Code plugin with its own marketplace. In Claude Code:
 
-- **User-level:** `~/.claude/skills/` (all your projects).
-- **Project-level:** `.claude/skills/` (one project).
-
-```sh
-cp -r nothing-is-load-bearing ~/.claude/skills/
+```
+/plugin marketplace add PierreSelim/nothing-is-load-bearing
+/plugin install nothing-is-load-bearing@nothing-is-load-bearing
 ```
 
-Keep the entire skill directory, including `references/jargon-index.md`. That file lists over 400 metaphors, grouped by the domain each one borrows from, with what to write instead. The skill reads it when reviewing a document.
+To try it from a local clone without installing:
+
+```sh
+claude --plugin-dir /path/to/nothing-is-load-bearing
+```
+
+### Manual install
+
+Without the plugin, copy the skill directory into `~/.claude/skills/` (all projects) or `.claude/skills/` (one project):
+
+```sh
+cp -r skills/nothing-is-load-bearing ~/.claude/skills/
+```
+
+The skill includes `references/jargon-index.md`, which lists over 400 metaphors, grouped by the domain each one borrows from, with what to write instead. The skill reads it when reviewing a document.
 
 ## Usage
 
@@ -68,7 +80,10 @@ Ask Claude to:
 
 ### Slash command
 
-Invoke `/nothing-is-load-bearing` to apply the skill to a document or passage.
+Invoke the skill by name to apply it to a document or passage:
+
+- Installed as a plugin: `/nothing-is-load-bearing:nothing-is-load-bearing`
+- Installed manually: `/nothing-is-load-bearing`
 
 ## License
 
