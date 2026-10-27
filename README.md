@@ -10,15 +10,17 @@ AI-generated technical writing uses expressions like "load-bearing", "front-load
 
 ## Example
 
+Prompt: a design-review note on how message retries affect a specification for a system that tracks aircraft delays from pub/sub messages, written in a metaphor-heavy register.
+
 **Claude standard output**
 
-> The config loader is load-bearing, and we need to front-load validation to reduce the blast radius of failures.
+> Retry safety is load-bearing on §3.2's strict "newer than", the bouncer that turns duplicates away. Remove it and the blast radius of one stale message ripples through every later milestone.
 
 **With nothing-is-load-bearing**
 
-> Every scheduler path calls `resolve_tz()`. Validate the configuration before starting the scheduler; otherwise, an invalid time zone can prevent scheduled jobs from running.
+> Retry safety depends on §3.2, which rejects a redelivered message because its `event_time` is not newer than the stored one. Without it, a stale estimate overwrites a newer one and §3.5 copies the wrong delay to the later milestones, giving up to four wrong delays.
 
-The second version names a dependency, an action, and a consequence, and a reader can check each one. The skill does not invent these facts: they come from the code or the author.
+The second version names the rule, what it does, and the consequence, so a reader can check each against the specification. The skill does not invent these facts: they come from the code, the specification, or the author.
 
 ## What it does
 
